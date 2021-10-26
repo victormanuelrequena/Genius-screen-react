@@ -57,12 +57,10 @@ const MainStyled = styled.div`
 const Rectangle = styled.div`
   width: 698px;
   height: 646px;
-  /* padding-top: 80px; */
-  /* padding-bottom: 80px; */
   position: relative;
   display: flex;
   align-items: center;
-  border-left: 4px solid hsl(0, 0%, 95.29411764705881%);
+  border-left: 2px solid hsl(0, 0%, 95.29411764705881%);
   `;
 
 const Content = styled.div`

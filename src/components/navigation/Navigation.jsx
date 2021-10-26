@@ -16,7 +16,6 @@ const Navigation = () => {
 }
 
 const NavigationStyled = styled.nav`
-  /* border: 1px solid red; */
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -26,7 +25,6 @@ const NavigationStyled = styled.nav`
 `;
 
 const RoutesList = styled.ul`
-  /* border: 1px solid blue; */
   width: 60%;
   display: flex;
   align-items: center;
@@ -40,6 +38,7 @@ const LI = styled.li`
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  cursor: pointer;
   &:nth-child(1) {
     color: #00DAFF;
     position: relative;
