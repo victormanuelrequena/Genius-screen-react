@@ -2,43 +2,40 @@ import React from 'react';
 import styled from 'styled-components';
 import { MdWeb, MdOutlineDesktopWindows, MdAutoFixHigh } from 'react-icons/md';
 
+const iconStyles = {
+  color: '#fff',
+  width: '60px',
+  height: '60px'
+}
+
 const Main = () => {
   return (
     <MainStyled>
       <Rectangle>
+        <Content>
+
         <Table>
           <MdAutoFixHigh 
-          style={{
-            color: '#fff',
-            width: '60px',
-            height: '60px'
-          }}
+          style={iconStyles}
           />
           <TTitle>Designin Your Website</TTitle>
           <TP>Begin by gathering all the information, photos, videos, media, etc, that you would like Genius, to add to your website´s first draft, if you´re ready please click here.</TP>
         </Table>
         <Table>
           <MdWeb 
-          style={{
-            color: '#fff',
-            width: '60px',
-            height: '60px'
-          }}
+          style={iconStyles}
           />
           <TTitle>Building Your Website</TTitle>
           <TP>With the information and media provided, Genius. will build you a draft website.</TP>
         </Table>
         <Table>
           <MdOutlineDesktopWindows
-          style={{
-            color: '#fff',
-            width: '60px',
-            height: '60px'
-          }}
+          style={iconStyles}
           />
           <TTitle>Going Live</TTitle>
           <TP>After you final appreval, Genius. will match a comprehensive pricing plan that best fits your online needs.</TP>
         </Table>
+        </Content>
       </Rectangle>
       <Box>
           <Gstarted>Getting Started.</Gstarted>
@@ -60,13 +57,21 @@ const MainStyled = styled.div`
 const Rectangle = styled.div`
   width: 698px;
   height: 646px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  /* padding-top: 80px; */
+  /* padding-bottom: 80px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid hsl(0, 0%, 95.29411764705881%);
+  `;
+
+const Content = styled.div`
+  width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0%, rgba(196, 196, 196, 0) 100.02%);
-  border-left: 4px solid #f3f3f3;
   padding-left: 32px;
 `;
 
@@ -88,8 +93,8 @@ const TTitle = styled.h4`
 `;
 
 const TP = styled.p`
-  font-weight: 400;
-  color: #fff;
+  font-weight: 300;
+  color: #f3f3f3;
   text-align: start;
   font-size: 14px;
   padding-top: .6em;
@@ -115,13 +120,24 @@ const Gstarted = styled.h2`
 
 const GSP = styled.p`
   width: 594px;
-  color: #fff;
-  font-weight: 400px;
+  color: #DCDCDC;
+  font-weight: 400;
   font-size: 15px;
   line-height: 22px;
   letter-spacing: 10%;
   text-align: start;
   padding-left: .6em;
+  position: relative;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: .5em;
+    left: -1.4em;
+  }
 `;
 
 export default Main
